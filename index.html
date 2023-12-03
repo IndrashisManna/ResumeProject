@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Resume</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://i.imgur.com/FPE2et0.png');
+    background-size: cover;
+    color: #1F2022;
+}
+
+h1 {
+    font-size: 50px;
+    color: #cdd8d7;
+}
+
+h2 {
+    font-size: 25px;
+    color: #0abab5;
+}
+
+
+header {
+    background-color: #5c6160;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(to right, rgba(231, 226, 226, 0) 0%, rgba(51, 51, 51, 0.8) 60%, rgba(51, 51, 51, 0.8) 100%);
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(202, 200, 200, 0.1);
+    display: grid;
+    grid-gap: 15px;
+}
+
+.profile-picture-container {
+    
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 20px auto 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border: 5px solid #0ABAB5;
+    background-color: transparent; /* Set background color to transparent */
+}
+
+.profile-picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.news-section {
+    background: linear-gradient(to right, rgba(51, 51, 51, 0) 0%, rgba(51, 51, 51, 0.8) 60%, rgba(51, 51, 51, 0.8) 100%);
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 10px solid #ffffff;
+    border-radius: 30px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.quick-links {
+    background: linear-gradient(to right, rgba(51, 51, 51, 0) 0%, rgba(51, 51, 51, 0.8) 60%, rgba(51, 51, 51, 0.8) 100%);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+}
+
+.quick-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.quick-links li {
+    color: #fff;
+    display: inline;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.quick-links a {
+    text-decoration: none; /* Remove underline */
+    color: #0ABAB5; /* Set link color */
+}
+
+
+article {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+pre {
+    white-space: pre-wrap;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: Monaco, monospace;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 50px auto;
+    padding: 50px;
+}
+
+h4 {
+    font-size: 19px;
+    color: #0ABAB5;
+}
+
+a {
+    color: #0a6d7a;
+}
+
+ul {
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+li {
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+.sub-heading {
+    font-weight: bold;
+    color: #1F2022;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons a {
+    margin: 0;
+}
+
+footer p {
+  color: #0ABAB5;
+}
+
+th, td {
+    color: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+.footer-bottom {
+    
+    padding: 5px; /* Adjust the padding as needed */
+}
+
+.footer-bottom p {
+    font-size: 14px; /* Adjust the font size as needed */
+    
+}
+
+.footer-bottom-Rights{
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.footer-links {
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap; /* Enable wrapping of link items */
+    justify-content: center;
+    align-items: center;
+    list-style: none; /* Remove bullets */
+    padding: 0;
+    margin: 0;
+    height: auto; /* Remove fixed height */
+}
+
+.footer-links li {
+    flex: 0 0 25%; /* Create columns of 4 by setting flex-basis to 25% */
+    margin: 10px; /* Add some spacing between items */
+}
+
+.footer-links a{
+  text-decoration: none;
+}
+
+.footer-links ul {
+    list-style: none; /* Remove bullets from the unordered list */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+
+
+.footer-info {
+    color: rgb(255, 255, 255);
+    text-align: center; /* Center-align the text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 30vh; /* Set the height to 100% of the viewport height */
+}
+
+.footer-info h4{
+    
+    font-size: 50px;
+}
+
+
+
+
+
+/* Clear the float to ensure subsequent content appears below both elements */
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+.profile-picture-container {
+    
+    width: 300px; /* Increase the width */
+    height: 300px; /* Increase the height */
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 20px auto 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border: 5px solid #0abab5; /* Add a red border */
+}
+
+
+
+
+.picture-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-picture {
+    width: 250px; /* Increase the width */
+    height: 250px; /* Increase the height */
+    margin: 10px;
+    border: 1px solid #0abab5;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.certificate-container {
+    display: flex;
+    justify-content: center; /* Align items horizontally */
+    align-items: center; /* Align items vertically */
+    margin-top: 20px; /* Adjust spacing between sections */
+}
+
+.mar-certificate {
+    width: 300px; /* Adjust the width of each box */
+    height: 200px; /* Adjust the height of each box */
+    margin: 10px;
+    border: 1px solid #0abab5; /* Add a border */
+    border-radius: 5px; /* Add border radius for a rounded look */
+    overflow: hidden; /* Hide image overflow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.mar-certificate img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain image aspect ratio */
+}
+
+/* Styles for the project links section */
+.project-links {
+  display: flex;
+  justify-content: space-between; /* Adjust the spacing between items */
+  align-items: center;
+  margin-top: 10px; /* Add space between text and images */
+}
+
+/* Styles for each project link */
+.project-links a {
+  flex-basis: 48%; /* Adjust the width of each link */
+  margin-bottom: 10px; /* Add space between links */
+}
+
+
+
+
+.about-me {
+  
+    flex: 1;
+    margin-top: 0;
+}
+
+/* Add this rule to prevent other sections from flexing */
+.news-section {
+    flex: 0 0 auto; /* Prevent the "News Section" from flexing */
+    margin-top: 20px; /* Add spacing between sections */
+}
+
+p {
+    white-space: pre-wrap;
+    /* Your other styles for the paragraph */
+}
+
+            
+            
+
+
+</style>
+</head>
+<body>
+  <header>
+    <h1>Indrashis Manna</h1>
+  </header>
+  <div class="quick-links">
+    <h2 style="font-size: 35px;">Quick Links</h2>
+
+    <ul>
+      <li><a href="#address">Address</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#personal-interests">Personal Interests</a></li>
+      <li><a href="#strengths-weaknesses">Strengths & Weaknesses</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#mar-certificates">Mar Certificates</a></li>
+      <li><a href="#mar-points">Mar Points</a></li>
+      <li><a href="#contact-me">Contact Me</a></li>
+    </ul>
+  </div>
+
+
+  
+    <div class="profile-picture-container">
+        <img src="https://i.imgur.com/2mrfjtE.jpg" alt="Profile's Picture" class="profile-picture">
+    </div>
+    
+    <div class="about-me">
+        
+        <p>
+            Indrashi Manna is a dedicated individual with a passion for technology and continuous learning. Hailing from Bawali, South 24 Parganas, West Bengal, he is a graduate of Julien Day School and pursued higher education at Budge Budge Institute of Technology.
+
+            Indrashi's interests extend beyond the classroom, encompassing reading, coding, data science, and machine learning. He is known for his strong work ethic and a keen sense of responsibility, making him a valuable team player. However, he acknowledges his occasional tendency to overthink and strive for perfection, recognizing areas for personal growth.
+
+            In the realm of skills, Indrashi possesses proficiency in various programming languages, including HTML, CSS, Java, C, Python, SQL, and Shell Script. Additionally, he delves into content creation, showcasing his talent on platforms like YouTube.
+
+            With an ever-growing collection of certificates and an impressive track record in the Mar field, Indrashi Manna is a well-rounded individual with a bright future ahead. You can reach out to him at indrashismanna@gmail.com or connect on social media through Facebook and Instagram.
+        </p>
+    </div>
+
+
+      <!-- Rest of your content -->
+    
+      <div class="container">
+  
+
+    <div class="news-section">
+      <h2 id="address">Address</h2>
+      <p>Bawali, South 24 Parganas, West Bengal, Pin: 700137.</p>
+    </div>
+    <div class="news-section">
+      <h2 id="education">Education</h2>
+      <div>
+        <p class="sub-heading">SCHOOL:</p>
+        <p>Julien Day School</p>
+      </div>
+      <div>
+        <p class="sub-heading">COLLEGE:</p>
+        <p>Budge Budge Institute of Technology</p>
+      </div>
+    </div>
+    <div class="news-section">
+      <h2 id="personal-interests">Personal Interests</h2>
+      <div>
+        <p class="sub-heading">My personal interests include:</p>
+        <p>Reading, coding, data science, machine learning.</p>
+      </div>
+    </div>
+
+    <div class="news-section">
+      <h2 id="personal-interests">Reading</h2>
+      <div>
+        <p class="sub-heading">Recently read boooks include:</p>
+        
+          
+
+        <div class="picture-container">
+          <div class="profile-picture">
+              <img src="https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/71MS6VKz3qL._SY466_.jpg" alt="Picture 1">
+          </div>
+          <div class="profile-picture">
+              <img src="https://m.media-amazon.com/images/I/91rM9MjNd0L._SL1500_.jpg" alt="Picture 2">
+          </div>
+          <div class="profile-picture">
+            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRHNnW_9l3sgpUR15ViZFmd31D_4nPBGDzrkr5zCeLTwkCjjYUe" alt="Picture 3">
+        </div>
+        <div class="profile-picture">
+          <img src="https://m.media-amazon.com/images/I/813zbNPhO5L._SY466_.jpg" alt="Picture 4">
+          </div>
+          <div class="profile-picture">
+            <img src="https://m.media-amazon.com/images/I/41RwO9GZxpS.jpg" alt="Picture 5">
+           </div>
+           <div class="profile-picture">
+            <img src="https://m.media-amazon.com/images/I/81VkNg8PRbL._SL1500_.jpg" alt="Picture 6">
+           </div>
+      </div>
+      
+        
+        
+      </div>
+    </div>
+
+    <div class="news-section">
+      <h2 id="strengths-weaknesses">Strengths & Weaknesses</h2>
+      <div>
+        <p class="sub-heading">STRENGTH:</p>
+        <p>I am a hardworking man who takes responsibilities very seriously. Also, I am very cooperative and like to work in a team.</p>
+      </div>
+      <div>
+        <p class="sub-heading">WEAKNESS:</p>
+        <p>I have a slight tendency to overthink, a liking for overperfection, and I am occasionally moody.</p>
+      </div>
+    </div>
+    <div class="news-section">
+      <h2 id="skills">Skills</h2>
+      <div>
+        <p><span class="sub-heading">Skill 1:</span> HTML.</p>
+        <p><span class="sub-heading">Skill 2:</span> CSS.</p>
+      </div>
+      <div>
+        <p><span class="sub-heading">Skill 3:</span> JAVA.</p>
+        <p><span class="sub-heading">Skill 4:</span> C.</p>
+      </div>
+      <div>
+        <p><span class="sub-heading">Skill 5:</span> PYTHON.</p>
+        <p><span class="sub-heading">Skill 6:</span> SQL.</p>
+      </div>
+      <div>
+        <p><span class="sub-heading">Skill 7:</span> Shell Script</p>
+        <p><span class="sub-heading">Skill 6:</span> Video making or Content Creation
+          
+          
+      <p><big>Here are some of my projects where I have displayed my skills</big></p>
+      <div class="project-links">
+        <a href="https://www.youtube.com/watch?v=SnE6_cI7QMg" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Logo_of_YouTube_%282015-2017%29.svg" height="200px" width="100px" alt="YouTube">
+        </a>
+        <a href="https://indrashismanna.github.io/Sunglasses-Website/" target="_blank">
+          <img src="https://static.vecteezy.com/system/resources/previews/005/447/960/original/sunglasses-logo-design-vector.jpg" height="200px" width="100px" alt="YouTube">
+        </a>
+        <a href="https://indrashismanna.github.io/US-Airforce-Career/" target="_blank">
+          <img src=" https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Mark_of_the_United_States_Air_Force.svg/800px-Mark_of_the_United_States_Air_Force.svg.png" height="200px" width="100px" alt="Github">
+        </a>
+      </div>
+    </div>
+
+
+
+      </div>
+    </div>
+    <div class="news-section">
+      <h2 id="mar-certificates">Mar Certificates</h2>
+      <p class="sub-heading">In the last few months  I have collected a number of Certificates.</p>
+
+      <div class="certificate-container">
+        <div class="mar-certificate">
+            <img src="https://i.imgur.com/kq5BUYM.png" alt="Mar Certificate 1">
+        </div>
+        <div class="mar-certificate">
+            <img src="https://i.imgur.com/eFdR1Ml.jpg" alt="Mar Certificate 2">
+        </div>
+        <div class="mar-certificate">
+          <img src="https://i.imgur.com/HXViZz9.jpg" alt="Mar Certificate 3">
+      </div>
+    </div>
+    
+
+
+
+
+    </div>
+    <div class="news-section">
+      <h2 id="mar-points">Mar Points</h2>
+      <p>In the Mar field, I have collected well over 30 points.</p>
+    </div>
+    <div class="news-section">
+      <h2 id="contact-me">Contact Me</h2>
+      <div>
+        <p><span class="sub-heading">Email ID:</span> indrashismanna@gmail.com.</p>
+      </div>
+        <div>
+          <p><span class="sub-heading">Facebook:</span> <a href="https://www.facebook.com/indrashis.manna.Aamir.khan" target="_blank">Indrashi Manna</a></p>
+          <p><span class="sub-heading">Instagram:</span> <a href="https://www.instagram.com/indra__shis/" target="_blank">indra_shis</a></p>
+       </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-info">
+        <h4>Contact Us</h4>
+        <p>
+          Address: Bawali Rai Chakroborty Para, Budge Budge, West Bengal<br>
+          Phone: 9883059203<br>
+          Email: indrashismanna@gmail.com
+       </p>
+      </div>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/indrashis.manna.Aamir.khan" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/1024px-2023_Facebook_icon.svg.png" alt="Facebook" height="70px" width="42px">
+      </a>
+      <a href="https://www.instagram.com/indra__shis/" target="_blank">
+        <img src="https://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c521.png" alt="Instagram" height="75px" width="50px">
+      </a>
+      <a href="https://www.linkedin.com/in/indrashis-chandra-manna-43a9bb230/" target="_blank">
+        <img src="https://static.vecteezy.com/system/resources/previews/018/930/587/non_2x/linkedin-logo-linkedin-icon-transparent-free-png.png" height="100px" width="70px" alt="linkedin">
+      </a>
+    </div>
+    <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#address">Address</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#personal-interests">Personal Interests</a></li>
+          <li><a href="#strengths-weaknesses">Strengths & Weaknesses</a></li>
+         <li><a href="#skills">Skills</a></li>
+         <li><a href="#mar-certificates">Mar Certificates</a></li>
+          <li><a href="#mar-points">Mar Points</a></li>
+          <li><a href="#contact-me">Contact Me</a></li>
+        </ul>
+      </div>
+    </div>
+   <div class="footer-bottom-Rights">
+    <p>&copy; All Rights Reserved. | Designed by <a href="https://www.linkedin.com/in/indrashis-chandra-manna-43a9bb230/" target="_blank">Indrashis Manna</a></p>
+  </div>
+  </footer>
+</body>
+</html>
