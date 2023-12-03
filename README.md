@@ -1,6 +1,3 @@
----
-
-**Project Title: HTML Resume**
 
 **Description:**
 This repository contains an HTML-based resume that highlights my professional experience, skills, education, and accomplishments. Built using HTML, CSS, and possibly JavaScript, this interactive resume offers a user-friendly interface for potential employers or collaborators to learn more about my background.
